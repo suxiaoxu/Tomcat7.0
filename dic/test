@@ -1,3 +1,30 @@
-## 1.测试用例
+## 1.如何更新安装
+研究一下Tomcat源码，并把它导到IDE中，以方便调试，参考了网上的一些资料，再结合自己的实际操作，现将已导入Ide并调试通过的Tomcat源码包放到了 gitHub上，有需要的朋友可以直接下载导入Ide直接进行调试运行，具体操作步骤如下：
 
-## 2.核心技术
+1、准备工作
+
+（1）、本地安装 jdk1.7 以上版本，配置好环境变量 
+（2）、官网下载安装 idea2016.2.3 
+（3）、安装 Git 
+（4）、安装Maven仓库
+
+2、下载源代码
+
+https://github.com/wangyingjie/tomcatsrc.git
+
+3、导入源代码
+
+（1）、本文是依赖 apache-tomcat-7.0.73-src.zip 版本实现的导入 
+（2）、已经将tomcat源码转为了一个maven工程，详情见 pom.xml 
+（3）、导入之后的代码如下：
+
+4、运行调试
+
+（1）、点击菜单栏Run-Edit configurations…，点击加号新建配置项Application Configuration，名称随意填写，如Tomcat7，Main Class选择org.apache.catalina.startup.Bootstrap； 
+VM options中填入： -Dcatalina.home=”D:\TomcatSrc7.0\tomcatsrc\lunch”
+
+（2）、执行 run Tomcat7 
+
+（3）、验证Tomcat启动是否成功 
+访问： http://127.0.0.1:8080/ 
+
